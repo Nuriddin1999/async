@@ -13,8 +13,12 @@ const hideLoading = () => {
   loadingEl.style.display = "none";
 };
 
+const showLoading = () => {
+  loadingEl.style.display = "block";
+};
+
 const fetchUsersToCache = async () => {
-  const res = await fetch("./data.json");
+  const res = await fetch("./ddata.json");
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
@@ -24,10 +28,15 @@ const fetchUsersToCache = async () => {
 };
 
 const removeAllUsers = () => {
-  localStorage.clear();
+  localStorage.removeItem("users");
   hideLoading(); // We hide usersDiv after deleting all users so we do not need to show loader we only give choice to reolad the page
   usersDiv.classList.add("users--hidden");
   info.classList.add("info--shown");
+  info.querySelector(".info__btn").addEventListener("click", () => {
+    info.classList.remove("info--shown");
+    showLoading();
+    renderList();
+  });
 };
 
 const renderListItem = ({ id, name, surname, email, age }) => {
@@ -78,8 +87,14 @@ const renderList = () => {
           errorEl.classList.add("error");
           errorEl.innerHTML = `
             <span>${error} :(</span>
-            <button onclick="window.location.reload()">reload the page</button>
+            <button>try again</button>
           `;
+
+          errorEl.querySelector("button").addEventListener("click", () => {
+            errorEl.remove();
+            showLoading();
+            renderList();
+          });
           document.body.appendChild(errorEl);
         });
     }, 3000);
