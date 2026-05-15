@@ -18,7 +18,7 @@ const showLoading = () => {
 };
 
 const fetchUsersToCache = async () => {
-  const res = await fetch("./ddata.json");
+  const res = await fetch("./data.json");
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
