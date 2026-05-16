@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Mister someone 1",
+      "surname": "Mister someone's surname 1",
+      "email": "some_email1@gmail.com",
+      "age": 27
+    },
+    {
+      "id": 2,
+      "name": "Mister someone 2",
+      "surname": "Mister someone's surname 2",
+      "email": "some_email2@gmail.com",
+      "age": 27
+    },
+    {
+      "id": 3,
+      "name": "Mister someone 3",
+      "surname": "Mister someone's surname 3",
+      "email": "some_email3@gmail.com",
+      "age": 27
+    },
+    {
+      "id": 4,
+      "name": "Mister someone 4",
+      "surname": "Mister someone's surname 4",
+      "email": "some_email4@gmail.com",
+      "age": 27
+    },
+    {
+      "id": 5,
+      "name": "Mister someone 5",
+      "surname": "Mister someone's surname 5",
+      "email": "some_email5@gmail.com",
+      "age": 27
+    }
+  ]
+}

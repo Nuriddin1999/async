@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="loading" id="loading">Loading...</div>
+    <div class="users users--hidden">
+      <button class="delete-all-users">Delete All users</button>
+      <ul class="users-list" id="users-list"></ul>
+    </div>
+    <div class="info">
+      <p>You deleted all users :(</p>
+      <span>If you want to refetch users from data.json without reload the page</span>
+      <button class="info__btn">get all users</button>
+      <span>or reload the page :)</span>
+    </div>
+    <script src="async.js"></script>
+  </body>
+</html>
